@@ -1,0 +1,25 @@
+// Calcular el ancho de los elementos en función de las dimensiones de la pantalla
+
+@function responsive-width($size) {
+  $max-width-small: 768px;
+  $max-width-medium: 1024px;
+  $max-width-large: 1440px;
+
+  $percentage-small: 100%;
+  $percentage-medium: 90%;
+  $percentage-large: 80%;
+
+  $width: 0;
+
+  @if $size == small {
+    $width: $percentage-small;
+  } @else if $size == medium {
+    $width: $percentage-medium;
+  } @else {
+    $width: $percentage-large;
+  }
+
+  @return #{$width};
+}
+
+

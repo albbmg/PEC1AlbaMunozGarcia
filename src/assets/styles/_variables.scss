@@ -1,12 +1,71 @@
 @use "sass:color";
+@import "functions";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// Fuentes
+$primary-font: 'Poppins', sans-serif;
 
-$mqMinWidth: 420px;
+// Tamaños de fuente
+$font-sizes: (
+  main-title: 4rem,
+  secondary-title: 2rem,
+  menu-text: 1.5rem,
+  body-text: 1.2rem,
+);
+
+// Peso de la fuente
+$font-weights: (
+  text: normal,
+  title: bold,
+);
+
+// Colores principales
+$colors: (
+  primary-color: #000,
+  secondary-color: #FFF,
+  contrast-color: #cdb873,
+); 
+
+// Margenes y espaciados
+$margins: (
+  small-space: 1rem,
+  large-space: 5rem,
+); 
+
+// Ancho de elementos
+$element-widths: (
+  full: responsive-width(large),
+  medium: responsive-width(medium),
+  small: responsive-width(small),
+);
+
+//Border-radius
+$border-radius-style: (
+  images: 20px, 
+  buttons: 100px,
+);
+
+// Botones
+@mixin button-styles {
+  padding: map-get($button-style, padding);
+  background-color: map-get($button-style, background-color);
+  color: map-get($button-style, color);
+  font-family: map-get($button-style, font-family);
+  font-size: map-get($button-style, font-size);
+  font-weight: map-get($button-style, font-weight);
+  border-radius: map-get($button-style, border-radius);
+  border: map-get($button-style, border);
+  transition: all 0.5s ease;
+}
+
+$button-style: (
+  padding: 10px 60px 10px 60px, 
+  background-color: map-get($colors, contrast-color),
+  color: map-get($colors, primary-color),
+  font-family: $primary-font,
+  font-weight: map-get($font-weights, title),
+  font-size: 16px,
+  border-radius: map-get($border-radius-style, buttons),
+  border: none,
+  transition: map-get($border-radius-style, transition),
+);
