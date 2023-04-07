@@ -2,11 +2,9 @@
   $max-width-small: 768px;
   $max-width-medium: 1024px;
   $max-width-large: 1440px;
-
   $percentage-small: 100%;
   $percentage-medium: 90%;
   $percentage-large: 80%;
-
   $width: 0;
 
   @if $size == "small" {

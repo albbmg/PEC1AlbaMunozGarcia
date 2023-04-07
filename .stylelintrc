@@ -11,7 +11,7 @@
       "ignoreFunctions": ["map-get", "responsive-width"]
     }],
     "at-rule-no-unknown": [ true, {
-      "ignoreAtRules": ["include", "use", "mixin"]
+      "ignoreAtRules": ["include", "function", "use", "mixin", "if", "else", "return"]
     }],
     "at-rule-empty-line-before": [
       "always", {
@@ -34,6 +34,7 @@
     "media-feature-range-notation": null,
     "import-notation": null,
     "no-duplicate-selectors": true,
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "scss/no-global-function-names": null
   }
 }
