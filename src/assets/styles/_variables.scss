@@ -1,11 +1,10 @@
 @use "sass:color";
 @import "functions";
 
-
-// Fuentes
+/* Fuentes */
 $primary-font: 'Poppins', sans-serif;
 
-// Tamaños de fuente
+/* Tamaños de fuente */
 $font-sizes: (
   main-title: 4rem,
   secondary-title: 2rem,
@@ -13,39 +12,39 @@ $font-sizes: (
   body-text: 1.2rem,
 );
 
-// Peso de la fuente
+/* Peso de la fuente */
 $font-weights: (
   text: normal,
   title: bold,
 );
 
-// Colores principales
+/* Colores principales */
 $colors: (
   primary-color: #000,
   secondary-color: #FFF,
   contrast-color: #cdb873,
 ); 
 
-// Margenes y espaciados
+/* Margenes y espaciados */
 $margins: (
   small-space: 1rem,
   large-space: 5rem,
 ); 
 
-// Ancho de elementos
+/* Ancho de elementos */
 $element-widths: (
   full: responsive-width(large),
   medium: responsive-width(medium),
   small: responsive-width(small),
 );
 
-//Border-radius
+/* Border-radius */
 $border-radius-style: (
   images: 20px, 
   buttons: 100px,
 );
 
-// Botones
+/* Botones */
 @mixin button-styles {
   padding: map-get($button-style, padding);
   background-color: map-get($button-style, background-color);
